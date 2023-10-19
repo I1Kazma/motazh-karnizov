@@ -1,0 +1,317 @@
+@import './style'
+
+.services
+    padding-bottom: 40px
+
+    .services__layout
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(128px, 1fr))
+        width: 100%
+        justify-content: center
+        align-items: center
+        gap: 20px
+
+        @media (max-width: 480px)
+            display: flex
+            flex-direction: column
+
+    .service-item
+        border-radius: 8px
+        border: 1px solid #EFEFEF
+        transition: 0.3s ease
+        height: 100%
+
+        @media (max-width: 480px)
+            width: 100%
+
+        &:hover
+            border: 1px solid $brown-hover
+
+        &:hover span
+            color: $brown-hover
+        a
+            display: flex
+            align-items: center
+            gap: 20px
+            padding: 16px 24px
+
+            @include tablet
+                flex-direction: column
+
+            @media (max-width: 480px)
+                flex-direction: row
+
+            span
+                color: $brown
+                font-size: 15px
+                font-weight: 700
+                line-height: 140%
+                letter-spacing: 0.3px
+                text-transform: uppercase
+                transition: 0.3s ease
+                text-align: center
+
+.main-banner
+    padding-bottom: 40px
+
+    .main-banner__layout
+        position: relative
+        overflow: hidden
+
+        .main-banner__swiper
+            position: relative
+
+            .swiper-pagination
+                display: flex
+                padding-left: 50px
+                bottom: 70px
+
+                @include tablet
+                    padding-left: 30px
+                    bottom: 80px
+
+                @include mobile-big
+                    bottom: 30px
+
+                .swiper-pagination-bullet-active
+                    background: $red !important
+                    width: 40px !important
+                    height: 9px !important
+                    border-radius: 10px !important
+
+                .swiper-pagination-bullet
+                    background: $light-brown
+                    width: 9px
+                    height: 9px
+
+            .swiper-slide
+                display: flex
+                background: #F8F4F0
+
+                @include mobile-big
+                    flex-direction: column-reverse
+
+                .main-banner__slide-content
+                    padding: 50px 40px 0px 50px
+                    display: flex
+                    align-items: center
+                    flex-direction: column
+                    min-width: 340px
+                    gap: 15px
+
+                    @include tablet
+                        padding: 30px 30px 0px
+                        min-width: 273px
+
+                    @include mobile-big
+                        min-width: auto
+                        padding: 30px
+
+                    @include mobile
+                        padding: 30px 24px
+
+                    h1
+                        color: $brown
+                        font-size: 30px
+                        font-weight: 700
+                        line-height: 120%
+
+                        @include tablet
+                            font-size: 24px
+
+                    span
+                        color: #000
+                        font-size: 16px
+                        font-weight: 400
+                        line-height: 140%
+
+                        @include tablet
+                            font-size: 15px
+
+                    .main-banner__slide-content__info
+                        padding-top: 9px
+                        width: 100%
+                        display: flex
+                        align-items: center
+                        gap: 30px
+
+                        @include mobile-big
+                            padding-bottom: 40px
+                        span
+                            color: $red
+                            font-size: 36px
+                            font-weight: 700
+                            line-height: 120%
+
+                            @include tablet
+                                font-size: 30px
+
+                        .more__button
+                            background: $brown
+                            color: white
+                            padding: 18px 30px
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            text-transform: uppercase
+                            transition: 0.3s ease
+                            border-radius: 8px
+
+                            &:hover
+                                background: $brown-hover
+
+                            @include tablet
+                                padding: 18px 27px
+
+                img
+                    max-width: 464px
+                    height: 400px
+
+                    @include mobile-big
+                        max-width: none
+                        height: 350px
+
+                    @include mobile
+                        height: 228px
+
+.callback
+
+    .callback__layout
+        padding: 50px
+        background: #F8F4F0
+
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        gap: 30px
+
+        @include desktop-small
+            padding: 40px
+
+        @include tablet
+            padding: 30px
+
+        h2
+            color: $brown
+            text-align: center
+            font-size: 36px
+            font-weight: 700
+            line-height: 120%
+
+            @include tablet
+                font-size: 30px
+
+        .callback__form
+            display: grid
+            grid-template-columns: repeat(3, minmax(100px, 276px))
+            grid-template-rows: 56px 120px 56px
+            grid-column-gap: 30px
+            grid-row-gap: 30px
+            width: 100%
+
+            @include mobile-big
+                display: flex
+                flex-direction: column
+                gap: 20px
+
+            input
+                padding: 15px 20px
+
+                border-radius: 8px
+                font-size: 16px
+                font-weight: 400
+                line-height: 160%
+                border: 1px solid transparent
+                transition: 0.3s ease
+                outline: none
+
+                &::placeholder
+                    transition: 0.3s ease
+                    color: $brown
+                &:hover::placeholder
+                    color: black
+                &:focus-visible
+                    border: 1px solid $red
+                &:focus::placeholder
+                    color: $red
+                &:hover
+                    border: 1px solid #FBCAA1
+
+            textarea
+                padding: 15px 20px
+                border-radius: 8px
+                font-size: 16px
+                font-weight: 400
+                line-height: 160%
+                border: 1px solid transparent
+                resize: none
+                height: 88px
+                transition: 0.3s ease
+                outline: none
+
+                &::placeholder
+                    transition: 0.3s ease
+                    color: $brown
+                &:hover::placeholder
+                    color: black
+                &:focus-visible
+                    border: 1px solid $red
+                &:focus::placeholder
+                    color: $red
+                &:hover
+                    border: 1px solid #FBCAA1
+
+            .callback__form__name
+                grid-area: 1 / 1 / 2 / 2
+
+            .callback__form__phone
+                grid-area: 1 / 2 / 2 / 3
+            .callback__form__email
+                grid-area: 1 / 3 / 2 / 4
+            .callback__form__textarea
+                grid-area: 2 / 1 / 3 / 4
+            .callback__form__button
+                grid-area: 3 / 1 / 4 / 4
+
+            .callback__form__button
+                display: flex
+                gap: 30px
+                align-items: center
+                button
+                    background: $brown
+                    display: flex
+                    padding: 18px 30px
+                    justify-content: center
+                    align-items: center
+                    border: 1px solid transparent
+                    transition: 0.3s ease
+                    border-radius: 8px
+
+                    color: #FFF
+                    font-size: 14px
+                    font-weight: 700
+                    line-height: 140%
+                    letter-spacing: 0.28px
+                    text-transform: uppercase
+                    cursor: pointer
+                    width: 100%
+                    max-width: 182px
+
+                    @include mobile-big
+                        max-width: none
+
+                    @media (max-width: 486px)
+                        grid-row-start: 2
+
+                    &:hover
+                        background: $brown-hover
+
+                @include mobile-big
+                    display: grid
+                    grid-template-columns: repeat(auto-fit, minmax(150px, auto))
+
+                span
+                    font-size: 15px
+                    font-weight: 400
+                    line-height: 140%

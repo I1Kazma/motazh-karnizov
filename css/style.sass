@@ -1,0 +1,64 @@
+$light-brown: #D0B59C
+$brown-hover: #E1A97A
+$red: #CF4242
+$brown: #846850
+
+$desktop-mid: 1340px
+$desktop-small: 992px,
+$tablet: 768px,
+$mobile-big: 576px
+$mobile: 380px
+
+@mixin desktop-mid
+    @media (max-width: $desktop-mid)
+        @content
+
+@mixin desktop-small
+    @media (max-width: $desktop-small)
+        @content
+
+@mixin tablet
+    @media (max-width: $tablet)
+        @content
+
+@mixin mobile-big
+    @media (max-width: $mobile-big)
+        @content
+
+@mixin mobile
+    @media (max-width: $mobile)
+        @content
+
+@font-face
+    font-family: "Calibri"
+    src: url("../font/calibri.ttf")
+
+header, main
+    padding: 0px 20px
+
+.max-width-wrapper
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.width-wrapper
+    width: 100%
+    max-width: 998px
+
+ul, li, h1, h2, h3, h4, h5, body
+    margin: 0
+    padding: 0
+
+body, button, a, li, input
+    font-family: "Calibri"
+
+a
+    text-decoration: none
+
+.red
+    color: $red
+
+.open
+    left: 0px !important

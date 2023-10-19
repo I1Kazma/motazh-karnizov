@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Calibri";
+  src: url("../font/calibri.ttf");
+}
+header, main {
+  padding: 0px 20px;
+}
+
+.max-width-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.width-wrapper {
+  width: 100%;
+  max-width: 998px;
+}
+
+ul, li, h1, h2, h3, h4, h5, body {
+  margin: 0;
+  padding: 0;
+}
+
+body, button, a, li, input {
+  font-family: "Calibri";
+}
+
+a {
+  text-decoration: none;
+}
+
+.red {
+  color: #CF4242;
+}
+
+.open {
+  left: 0px !important;
+}/*# sourceMappingURL=style.css.map */
