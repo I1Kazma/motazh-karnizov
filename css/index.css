@@ -64,6 +64,7 @@ a {
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 @media (max-width: 380px) {
   .header__layout .header__layout__top .header__layout__logo {
@@ -240,18 +241,21 @@ a {
   justify-content: center;
   align-items: center;
   border: 1px solid #EFEFEF;
-  padding: 14px;
-  max-height: 24px;
   border-radius: 8px;
   transition: 0.3s ease;
 }
+.header__layout .header__layout__top .header__search a, .header__layout .header__layout__top .header__busket a {
+  padding: 14px;
+}
 @media (max-width: 992px) {
-  .header__layout .header__layout__top .header__search, .header__layout .header__layout__top .header__busket {
+  .header__layout .header__layout__top .header__search a, .header__layout .header__layout__top .header__busket a {
     padding: 15px;
+    max-width: 26px;
+    max-height: 26px;
   }
 }
 @media (max-width: 380px) {
-  .header__layout .header__layout__top .header__search, .header__layout .header__layout__top .header__busket {
+  .header__layout .header__layout__top .header__search a, .header__layout .header__layout__top .header__busket a {
     padding: 11px;
   }
 }
@@ -577,6 +581,66 @@ a {
   color: black;
   font-weight: 400;
   line-height: 130%;
+}
+
+.header__search:hover .header__search__hover {
+  max-height: 60px;
+}
+.header__search .header__search__hover {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  top: 74px;
+  left: -20px;
+  width: 100%;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.15s ease;
+}
+@media (max-width: 992px) {
+  .header__search .header__search__hover {
+    left: 0px;
+  }
+}
+.header__search .header__search__hover .header__search__panel {
+  width: 100%;
+  max-width: 537px;
+  display: flex;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0px 0px 8px 5px rgba(208, 181, 156, 0.2);
+  margin: 6px;
+}
+@media (max-width: 992px) {
+  .header__search .header__search__hover .header__search__panel {
+    max-width: none;
+    margin: 10px 6px 6px;
+  }
+}
+.header__search .header__search__hover .header__search__panel__input {
+  width: 100%;
+  border: 1px solid #EFEFEF;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 17px;
+  color: black;
+  font-weight: 400;
+  line-height: 130%;
+  outline: none;
+}
+.header__search .header__search__hover .header__search__panel__submit-search {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  border: none;
+  right: 9px;
+  padding: 0px;
+  width: 50px;
+  background: url("../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 
 @font-face {
