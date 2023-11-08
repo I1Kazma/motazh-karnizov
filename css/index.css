@@ -603,6 +603,11 @@ a {
     left: 0px;
   }
 }
+@media (max-width: 380px) {
+  .header__search .header__search__hover {
+    top: 50px;
+  }
+}
 .header__search .header__search__hover .header__search__panel {
   width: 100%;
   max-width: 537px;
