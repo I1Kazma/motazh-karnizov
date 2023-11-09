@@ -1,9 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Calibri";
   src: url("../font/calibri.ttf");
 }
 header, main {
   padding: 0px 20px;
+}
+
+ul {
+  list-style: none;
 }
 
 .max-width-wrapper {
@@ -154,6 +164,7 @@ a {
   flex-direction: column;
   min-width: 340px;
   gap: 15px;
+  box-sizing: content-box;
 }
 @media (max-width: 768px) {
   .main-banner .main-banner__layout .main-banner__swiper .swiper-slide .main-banner__slide-content {
@@ -412,6 +423,7 @@ a {
   cursor: pointer;
   width: 100%;
   max-width: 182px;
+  box-sizing: content-box;
 }
 @media (max-width: 576px) {
   .callback .callback__layout .callback__form .callback__form__button button {

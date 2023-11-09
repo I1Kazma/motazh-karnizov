@@ -1,9 +1,19 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "Calibri";
   src: url("../font/calibri.ttf");
 }
 header, main {
   padding: 0px 20px;
+}
+
+ul {
+  list-style: none;
 }
 
 .max-width-wrapper {

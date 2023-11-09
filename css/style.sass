@@ -9,6 +9,11 @@ $tablet: 768px,
 $mobile-big: 576px
 $mobile: 380px
 
+*
+    margin: 0px
+    padding: 0px
+    box-sizing: border-box
+
 @mixin desktop-mid
     @media (max-width: $desktop-mid)
         @content
@@ -35,6 +40,9 @@ $mobile: 380px
 
 header, main
     padding: 0px 20px
+
+ul
+    list-style: none
 
 .max-width-wrapper
     width: 100%

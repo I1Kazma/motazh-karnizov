@@ -99,16 +99,19 @@
                 width: auto
 
             .telegram, .whatsapp, .vk, .header__burger
+
                 @include tablet
                     display: none
 
                 a
+                    box-sizing: content-box
+
                     @include desktop-small
                         display: flex
                         height: 100%
                         max-height: 28px
                         max-width: 28px
-                        padding: 15px
+                        padding: 14px
                         border-radius: 8px
                         border: 1px solid #EFEFEF
                         transition: 0.3s ease
@@ -179,6 +182,7 @@
 
             a
                 padding: 14px
+                box-sizing: content-box
 
                 @include desktop-small
                     padding: 15px
@@ -322,16 +326,14 @@
             z-index: 11
             top: 0
             padding: 24px 20px
-            width: 95%
+            width: 100%
             height: 100%
             flex-direction: column
             transition: 0.3s ease
 
         @include mobile-big
-            width: 93%
 
         @include mobile
-            width: 89%
             border: none
 
         .header__layout__bottom__close
@@ -342,6 +344,7 @@
             cursor: pointer
             transition: 0.3s ease
             display: none
+            box-sizing: content-box
 
             &:hover
                 border: 1px solid #FBCAA1
@@ -375,21 +378,48 @@
             @include mobile-big
                 gap: 40px
 
-            a
-                color: #000
-                font-size: 15px
-                font-weight: 700
-                line-height: 140%
-                text-transform: uppercase
-                transition: 0.3s ease
+            li
+                position: relative
 
-                &:hover
-                    color: $brown
+                &:hover .header__layout__bottom__menu__submenu
+                    max-height: 360px
 
-                @include tablet
-                    font-size: 18px
+                a
+                    color: #000
+                    font-size: 15px
                     font-weight: 700
-                    line-height: 70%
+                    line-height: 140%
+                    text-transform: uppercase
+                    transition: 0.3s ease
+
+                    &:hover
+                        color: $brown
+
+                    @include tablet
+                        font-size: 18px
+                        font-weight: 700
+                        line-height: 70%
+
+                .header__layout__bottom__menu__submenu
+                    position: absolute
+                    background: white
+                    z-index: 2
+                    max-height: 0px
+                    overflow: hidden
+                    transition: 0.3s ease
+                    border-radius: 16px
+                    padding-top: 10px
+
+                    @include tablet
+                        display: none
+
+                    .header__layout__bottom__menu__submenu__items
+                        display: grid
+                        padding: 20px
+                        grid-template-columns: repeat(2, minmax(200px, auto))
+                        border: 1px solid #efefef
+                        gap: 10px
+                        border-radius: 16px
 
         .header__layout__bottom__menu__links
             display: none
@@ -425,9 +455,12 @@
                 max-width: 228px
 
                 .telegram, .whatsapp, .vk, .header__burger
+                    box-sizing: content-box
+
                     @include tablet
 
                     a
+
                     @include desktop-small
                         display: flex
                         height: 100%
