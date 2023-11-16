@@ -8,7 +8,7 @@
   font-family: "Calibri";
   src: url("../font/calibri.ttf");
 }
-header, main {
+main {
   padding: 0px 20px;
 }
 
