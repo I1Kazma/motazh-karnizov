@@ -2,6 +2,10 @@ const swiper = new Swiper('.main-banner__swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
+    autoplay: {
+        delay: 7000,
+        disableOnInteraction: false,
+    },
 
     // If we need pagination
     pagination: {
