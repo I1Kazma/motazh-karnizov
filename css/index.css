@@ -346,9 +346,6 @@ a {
     background: transparent;
   }
 }
-.header__layout .header__number a input {
-  padding: 0px;
-}
 .header__layout .header__number a svg path {
   transition: 0.3s ease;
 }
@@ -365,6 +362,7 @@ a {
   color: white;
   transform: translateY(-9px);
   text-align: center;
+  padding: 0px;
   font-size: 15px;
   font-weight: 700;
   line-height: 140%;
