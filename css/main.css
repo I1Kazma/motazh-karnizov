@@ -422,12 +422,13 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   width: 100%;
-  max-width: 182px;
   box-sizing: content-box;
+  max-width: 182px;
 }
 @media (max-width: 576px) {
   .callback .callback__layout .callback__form .callback__form__button button {
     max-width: none;
+    box-sizing: border-box;
   }
 }
 @media (max-width: 486px) {

@@ -297,11 +297,13 @@
                     text-transform: uppercase
                     cursor: pointer
                     width: 100%
-                    max-width: 182px
                     box-sizing: content-box
+                    max-width: 182px
+                    @include desktop-small
 
                     @include mobile-big
                         max-width: none
+                        box-sizing: border-box
 
                     @media (max-width: 486px)
                         grid-row-start: 2

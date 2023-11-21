@@ -346,6 +346,9 @@ a {
     background: transparent;
   }
 }
+.header__layout .header__number a input {
+  padding: 0px;
+}
 .header__layout .header__number a svg path {
   transition: 0.3s ease;
 }
@@ -1115,12 +1118,13 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   width: 100%;
-  max-width: 182px;
   box-sizing: content-box;
+  max-width: 182px;
 }
 @media (max-width: 576px) {
   .callback .callback__layout .callback__form .callback__form__button button {
     max-width: none;
+    box-sizing: border-box;
   }
 }
 @media (max-width: 486px) {
